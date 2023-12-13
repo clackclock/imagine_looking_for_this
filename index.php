@@ -14,7 +14,7 @@
     <style>
         body{
             background-color: #c7b591;
-            background-image: url('/sacia.matthews/social_software_blog/images/Moraine_Lake.jpg');
+            background-image: url("Moraine_Lake.jpg");
             background-size: cover;
             background-position: top;
             
