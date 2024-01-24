@@ -33,6 +33,7 @@
 <body>
     <h1>S.Matthews AKA Cluck AKA The Biggest 's Landing Page </h1>
     <a href="/sacia.matthews/now/">Now Page</a>
+    <p><span style = "background-color:antiquewhite"><a href = "./scriptWeb/index.html"> Card Blog</a></span></p>
     
 
 </body>
