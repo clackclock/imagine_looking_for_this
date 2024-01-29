@@ -47,7 +47,6 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            background-image: url("cloud.png.png");
             font-size: 20px;
             margin:10%;
             
@@ -67,16 +66,23 @@
 /*             background: rgb(118, 194, 193,0.2); */
             
         }
+        .link{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            background-image: url("cloud.png.png");
+        }
         
     </style>
 <body>
     <h1>S.Matthews AKA Cluck 's Landing Page </h1>
     <div class = "panel"> 
         <h2>Website Links</h2>
-    <p><span style = "background-color:antiquewhite"><a href="./now/index.html">Now Page</a></span></p>
-    <p><span style = "background-color:antiquewhite"><a href = "./social_software_blog/index.html"> Blog (Broken AF)</a>
-    </span></p>
-    <p><span style = "background-color:antiquewhite"><a href = "./scriptWeb/index.html"> Card Blog</a></span></p>
+    <div class = "link" ><span style = "background-color:antiquewhite"><a href="./now/index.html">Now Page</a></span></div>
+    <div class = "link"><span style = "background-color:antiquewhite"><a href = "./social_software_blog/index.html"> Blog (Broken AF)</a>
+    </span></div>
+    <div class = "link"><span style = "background-color:antiquewhite"><a href = "./scriptWeb/index.html"> Card Blog</a></span></div>
     
     </div>
     
