@@ -19,8 +19,8 @@
     rel="stylesheet">
 
   <meta charset="UTF-8" />
-
-  <link rel="icon" href="https://pixsector.com/cache/31d7efc8/av02e62f6a8621196a740.png">
+  <!-- https://pixsector.com/cache/31d7efc8/av02e62f6a8621196a740.png -->
+  <link rel="icon" href="https://www.svgrepo.com/show/172339/security.svg">
 
   <title>Home&co</title>
   <!--     <link rel="stylesheet" href="/style.css" /> -->
@@ -28,17 +28,56 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!--   src="scriptWeb/script.js" defer -->
   <script>
-    setInterval(altPage, 500);
+    //setInterval(altPage, 1000);
+    $(document).ready(function(){
+
+      setInterval(altPage, 30000);
+      setInterval(rere, 50000);
+    })
+
+    function rere(){
+      history.go(0);
+    }
 
     function altPage(){
       document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/1c/aa/a6/1caaa6739233c724befe59ed743c4413.gif')";
-      document.body.style.color = rgb(255,0,0);
+      $(".upImg").prepend('<img src="https://pngimg.com/uploads/city/city_PNG7.png" />');
+      $(".truth").text("YOUR FEARS, OUR FREEDOM");
+      $(".truth").css("fontFamily","Sixtyfour, sans-serif");
+      $(".truth").css("fontSize", 50,"px");
+      $(".truth").css("color", "white");
+
+      $("p").css("color", "white");
+      $("p").css("fontFamily","Sixtyfour, sans-serif" );
+      $("p").css("fontSize", 50,"px");
+      $("h2").css("color", "white");
+      $("h2").css("fontFamily","Sixtyfour, sans-serif" );
+      // $(".plate").css("background-color",239, 196, 111);
+      // $(".plate").replaceWith(function(){
+        
+      //   $("#about").text("IF YOU WERE ME YOU WOULD BE FREE TO. YOUR SAFETY HAS BEEN SOLD");
+      //   $("#outreach").text("THE SUN WILL BURN OUT BUT WE WILL HAVE REACHED THE STARS");
+      //   $("#motivations").text("DON'T LET THE LIGHTS GO OUT");
+      
+      // })
+      $(".plate").css( "background-color", "transparent" );
+      $(".plate").css("outline", "transparent");
+      $(".rid").remove();
+      $("#about").text("IF YOU WERE ME YOU WOULD BE FREE TO. YOUR SAFETY HAS BEEN SOLD");
+      $("#outreach").text("THE SUN WILL BURN OUT BUT WE WILL HAVE REACHED THE STARS");
+      $("#motivations").text("DON'T LET THE LIGHTS GO OUT DON'T LET THE LIGHTS GO OUT DON'T LET THE LIGHTS GO OUT");
+      // document.body.style.accentColor = rgb(255,0,0)
+      // document.getElementsByClassName("plate").style.fontFamily = "Sixtyfour, sans-serif";
     }
   </script>
 
   <style>
     body {
-      /* background-image: url("https://i.pinimg.com/originals/1c/aa/a6/1caaa6739233c724befe59ed743c4413.gif"); */
+     background-image: url("/scriptWeb/images/houseHill.jpg");
+     /* Ian Burt Blue House - House on the Hill  CC BY 2.0 DEED Attribution 2.0 Generic*/
+     background-repeat: no-repeat;
+      background-size: cover;
+     
 
       background-color: antiquewhite;
       /*         color: #03045e; */
@@ -53,7 +92,7 @@
       font-style: normal;
     }
 
-    .sixtyfour {
+    .sixtyfour-uniquifier {
       font-family: "Sixtyfour", sans-serif;
       font-optical-sizing: auto;
       font-weight: 400;
@@ -152,37 +191,36 @@
 </head>
 
 <body>
-  <h1>Home inc.:<i> Where You Feel Safest And Free</i></h1>
+  <div class = "truth"><h1>Home inc.:<i> Where You Feel Safest And Free</i></h1></div>
+  
   <div class="upImg">
-    <img src="https://pngimg.com/uploads/city/city_PNG7.png" />
+    <!-- <img src="https://pngimg.com/uploads/city/city_PNG7.png" /> -->
+    <img class = "rid" src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Black_community_icon.png" />
+    <!-- File:Black community icon.png Ariel196 CC BY-SA 4.0 DEED Attribution-ShareAlike 4.0 International -->
   </div>
   <div class="plate">
 
     <h2><strong>About</strong></h2>
-    <p></p>
+    <p id = "about"></p>
 
 
     <h2><strong>Outreach</strong></h2>
 
-    <p> </p>
+    <p id = "outreach"> </p>
 
     <h2><strong>Motivations</strong></h2>
 
-    <p></p>
+    <p id = "motivations"></p>
 
-    <p> <em> </em> </span> </p>
-
-    <div class="person">
-
-      <!-- <img src="https://cdn.glitch.global/f6774d5a-1407-411f-bb1c-032b2a62b733/0%20-%20Sow%20victory%2C%20reap%20the%20benefits%20(Front).jpg?v=1693438761875" />-->
-
-    </div>
-
-    <p>
+    <!-- <p> <em> </em> </span> </p> -->
+    <!-- <div class="person">
+      <img src="https://cdn.glitch.global/f6774d5a-1407-411f-bb1c-032b2a62b733/0%20-%20Sow%20victory%2C%20reap%20the%20benefits%20(Front).jpg?v=1693438761875" />
+    </div> -->
+    <!-- <p>
       <em> </em>
-    </p>
+    </p> -->
 
-    <h2><strong>Allied Groups</strong></h2>
+    <h2><strong>Allies</strong></h2>
 
     <div class="person"> </div>
   </div>
