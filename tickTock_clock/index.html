@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ticking Clock</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="clock-line-icon.png">
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Ojuju;
+        }
+
+        .ojuju {
+            font-family: "Ojuju", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .protest-revolution-regular {
+            font-family: "Protest Revolution", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .jacquarda-bastarda {
+            font-family: "Jacquarda Bastarda 9", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        img{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 250px;
+            height: auto;
+        }
+
+        #tt {
+            display:flex;
+            flex-direction: row;
+            width : 800px;
+            height: auto;
+        }
+
+        .thing{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .problem{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            /* background-image: url("sisyphus.gif"); */
+
+        }
+        #age{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            color :gray;
+            font-family: Protest Revolution;
+            font-size: 62pt;
+        }
+        #clock{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            color :gray;
+            font-family: Protest Revolution;
+            font-size: 72pt;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script>
+        //console.log("kekw");
+
+        $(document).ready(function () {
+            //$("body").css("background-color","purple");
+            displayTime();
+            setInterval(displayTime, 1000);
+            setInterval(solar,1000);
+            bDay();
+
+            function displayTime() {
+                let currentTime = new Date();
+
+                
+
+                let year = currentTime.getFullYear();
+                let month = currentTime.getMonth();
+                let day = currentTime.getDate();
+
+                let hours = currentTime.getHours();
+                let minutes = currentTime.getMinutes();
+                let seconds = currentTime.getSeconds();
+                let milsec = currentTime.getMilliseconds();
+                let meridian = "am";
+
+                if (hours >= 12) {
+                    meridian = "pm";
+                    if (hours > 12) {
+                        hours = hours - 12;
+                    }
+                }
+                if(hours < 10){
+                    hours = "0"+hours;
+                }
+                let min = ":";
+                let sec = ":";
+                if (minutes < 10) {
+                    minutes = "0"+minutes;
+                }
+                if (seconds < 10) {
+                    seconds = "0"+seconds;
+                }
+
+                if(month < 10){
+                    month = "0"+month;
+                }
+                if(day < 10){
+                    day = "0"+day;
+                }
+
+                 let yearOld = year - 2003;
+                
+                //console.log("It's " +hours + " o'clock"); 
+                $("#age").text("current age " + yearOld +" || Date: " + year + "/ " + month + "/ " + day);
+                $("#clock").text(hours + min + minutes + sec + seconds + meridian);
+            }
+
+            function solar(){
+                let currentTime = new Date();
+                let hours = currentTime.getHours();
+
+                if(hours >= 18){
+                    $("body").css("background-color", "black");
+                    document.getElementById("sky").src = "moon.png";
+                    document.getElementById("tt").src = "tictoc.gif";
+                    document.getElementsByClassName("problem").css("background-image", transparent);
+                }
+            }
+
+            function bDay(){
+                let currentTime = new Date();
+                let month = currentTime.getMonth();
+                let day = currentTime.getDate();
+                if(month == 2 && day == 4){
+                    $("body").css("background-image", "still_alive.jpg");
+                }
+                
+            }
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class = "problem"><img id = "sky" src = "sisyphus.gif"></div>
+    <div id = "age"></div>
+    <div id = "clock"></div>
+    <div class = "thing"><img id = "tt" src = "Tick_Tock.gif"></div>
+</body>
+
+</html>
