@@ -1,0 +1,70 @@
+body{
+  display: flex;
+  background-color: blue;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://cdn.glitch.global/07d7e99a-e087-44be-8a44-f40649d49452/blank-blue-halftone-background_53876-99003.avif?v=1712188329217);
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+header{
+  display:flex;
+  flex-direction: column;
+  font-family: "Rubik Scribble", system-ui;
+  font-size: 48pt;
+}
+#the-forecast {
+  font-size: 25pt;
+}
+
+.butterfly-kids-regular {
+  font-family: "Butterfly Kids", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.rubik-scribble-regular {
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.purch{
+  font-size:18pt;
+}
+img {
+  width: 50vmin;
+  height: auto;
+}
+.textBox{
+  display: flex;
+  align-content: center;
+  justify-content: start;
+  flex-direction: column;
+  margin: 20px;
+  border: 4px double gray;
+  border-style: double;
+  border-radius: 15px;
+  border-color: gray;
+  outline-offset:4px;
+  outline: 5px dotted white;
+  font-family: "Butterfly Kids", cursive;
+  background-color: lightgray;
+  } 
+.textBox .con{
+  padding: 5px;
+}
+#mom-face{
+  display: flex;
+  border-style: double;
+}
+.mom{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+hr{
+  color:red;
+  width:75%;
+}
