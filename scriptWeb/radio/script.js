@@ -16,7 +16,7 @@ function playS1(data) {
   console.log("working...");
   //$(".statLogo").attr("src",data.stations[0].logoUrl);
 
-  $.getJSON("../stations.json", function (data) {
+  $.getJSON("radio/stations.json", function (data) {
     var linkT = data.stations[0].logoUrl;
     console.log(linkT);
     //  $(".statLogo").css("background-image",src =(linkT));
@@ -39,7 +39,7 @@ function playS2(data) {
   console.log("working...");
   //$(".statLogo").attr("src",data.stations[0].logoUrl);
 
-  $.getJSON("../stations.json", function (data) {
+  $.getJSON("radio/stations.json", function (data) {
     var linkT = data.stations[1].logoUrl;
     console.log(linkT);
 
@@ -63,7 +63,7 @@ function playS3(data) {
   console.log("working...");
   //$(".statLogo").attr("src",data.stations[0].logoUrl);
 
-  $.getJSON("../stations.json", function (data) {
+  $.getJSON("radio/stations.json", function (data) {
     var linkT = data.stations[3].logoUrl;
     console.log(linkT);
 
