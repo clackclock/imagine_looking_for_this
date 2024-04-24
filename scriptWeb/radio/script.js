@@ -16,7 +16,7 @@ function playS1(data) {
   console.log("working...");
   //$(".statLogo").attr("src",data.stations[0].logoUrl);
 
-  $.getJSON("./stations.json", function (data) {
+  $.getJSON(url="./stations.json", function (data) {
     var linkT = data.stations[0].logoUrl;
     console.log(linkT);
     //  $(".statLogo").css("background-image",src =(linkT));
