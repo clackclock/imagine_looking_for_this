@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/cb182bcb-4007-424f-a40d-8b8f275fe7c4/1104435.png?v=1712782407985"
+    />
+    <!--     <link rel="icon" href="https://cdn.glitch.global/cb182bcb-4007-424f-a40d-8b8f275fe7c4/free-radio-1629577-1383428.png?v=1713394982812" /> -->
+  </head>
+
+  <body>
+    <audio id="music" preload="all" src="">
+      <source id="trying" src="" />
+      <!--       https://stream-relay-geo.ntslive.net/stream -->
+    </audio>
+
+    <div class="dial">
+      <img
+        src="https://cdn.glitch.global/cb182bcb-4007-424f-a40d-8b8f275fe7c4/A-typical-radio-dial.png?v=1713395978030"
+      />
+    </div>
+    <div class="func">
+      <button class="button-74">
+        <img
+        onclick="playMusic()"
+        width="50px"
+        src="https://cdn.glitch.global/cb182bcb-4007-424f-a40d-8b8f275fe7c4/free-skip-1767854-1502107.png?v=1713384143402"
+      />
+      </button>
+      
+      
+      <div class="stat">
+        <button class="button-74" id="s1" onclick="playS1()">Station 1</button>
+        <button class="button-74" id="s2" onclick="playS2()">Station 2</button>
+        <button class="button-74" id="s3" onclick="playS3()">Station 3</button>
+      </div>
+      
+      <button class="button-74">
+        <img
+        onclick="stopMusic()"
+        width="50px"
+        src="https://cdn.glitch.global/cb182bcb-4007-424f-a40d-8b8f275fe7c4/Mute_Icon.svg?v=1713384235872"
+      />
+      </button>
+    </div>
+
+    <div class="statLogo">
+      <img id="r1" src=" " />
+    </div>
+  </body>
+</html>
