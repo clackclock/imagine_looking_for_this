@@ -21,27 +21,96 @@
   <title>Card Block</title>
   <!--     <link rel="stylesheet" href="/style.css" /> -->
 <!--       <script src="./script.js" defer></script> -->
-  <script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script> 
+    favButton(); //run our function on load
+
+    function favButton() {
+      let f1 = document.getElementById("fav1");
+      let f2 = document.getElementById("fav2");
+      let f3 = document.getElementById("fav3");
+      let f4 = document.getElementById("fav4");
+      let f5 = document.getElementById("fav5");
+
+      for(let i = 1; i < 6; i++){
+        let favStorage = localStorage.getItem("fav"+i)
+        ? JSON.parse(localStorage.getItem("fav"+i))
+        : [];
+      }
+      
+    }
+    //type="module" src="./index.js"
+    // import data from "scriptWeb/2024_04_05_Cards.json" assert { type: 'json' };
+
     function openUpdate(evt, versionDate) {
       // Declare all variables
       var i, tabcontent, tablinks;
-
       // Get all elements with class="tabcontent" and hide them
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
-
       // Get all elements with class="tablinks" and remove the class "active"
       tablinks = document.getElementsByClassName("tablinks");
       for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
-
       // Show the current tab, and add an "active" class to the button that opened the tab
       document.getElementById(versionDate).style.display = "block";
       evt.currentTarget.className += " active";
     }
+
+    function getUpdateImages(versionDate){
+      let cdataURL = '../scriptWeb/'+versionDate+'_Cards.json';
+      $.ajax({
+          url: cdataURL,
+          contentType: "application/json",
+          data: JSON.stringify("{" + cdataURL + "}"),
+          dataType: "json"
+      })
+      .done(function(data){
+        console.log(data.cardList[0].name);
+        for(let i in data.cardList){
+          if(data.cardList[i].type == "Plant"){
+            $(".cardSec #plant").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
+          }
+          if(data.cardList[i].type == "Water"){
+            $(".cardSec #water").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
+          }
+          if(data.cardList[i].type == "Tool"){
+            $(".cardSec #tool").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
+          }
+          if(data.cardList[i].type == "Flower"){
+            $(".cardSec #flower").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
+          }
+          if(data.cardList[i].type == "Farm"){
+            $(".cardSec #farm").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
+          }
+          if(data.cardList[i].type == "support_Item"){
+            $(".cardSec #supportItem").append('<img alt = "' + data.cardList[i].name + '" src = "' + data.cardList[i].imgLink + '">');
+          }
+          if(data.cardList[i].type == "support_Metal"){
+            $(".cardSec #supportMetal").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
+          }
+          if(data.cardList[i].type == "Combo"){
+            $(".cardSec #combos").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
+          }
+        }
+          
+      });
+    }
+
+    function emptyUpdate(){
+      $(".cardSec #plant").empty();
+      $(".cardSec #water").empty();
+      $(".cardSec #tool").empty();
+      $(".cardSec #flower").empty();
+      $(".cardSec #farm").empty();
+      $(".cardSec #supportItem").empty();
+      $(".cardSec #supportMetal").empty();
+      $(".cardSec #combos").empty();
+    }
+
   </script>
 
   <style>
@@ -114,12 +183,13 @@
       background-color: rgba(38, 24, 35, 0.7);
 
       outline-color: #a9a9a9;
-      outline-style: ridge;
+      outline-style: double;
       outline-width: 5px;
       outline-offset: 0;
       margin: 25px;
       margin-bottom:30px;
       padding-bottom: 10px;
+      font-size: 15pt;
     }
     .archiveActual{
       display: flex;
@@ -139,7 +209,7 @@
       padding-bottom: 10px;
     }
     
-    .favCards{
+    .Top5{
       display:flex;
       flex-direction: row;
       justify-content: center;
@@ -178,6 +248,7 @@
     .cardScroll:hover{
       /* transform:scale(2.5) */
       height:400px;
+      overflow-x: auto;
     }
 
     footer {
@@ -201,9 +272,10 @@
       border: none;
       outline: none;
       cursor: pointer;
-      padding: 14px 16px;
+      padding: 15px 17px;
       transition: 0.3s;
       font-family: "Jersey 15", sans-serif;
+      font-size: 20pt;
       color:antiquewhite;
     }
     /* Change background color of buttons on hover */
@@ -245,7 +317,7 @@
 <body>
   <h1>Basically, I'm Showing Off My <i>Deck</i></h1>
   <h3>Top 5 Cards:</h3>
-  <div class = "favCards">
+  <div class = "Top5">
     <img id = "fav1" src = "images/3 - Unnamed (Back).jpg">
     <img id = "fav2" src = "images/3 - Unnamed (Back).jpg">
     <img id = "fav3" src = "images/3 - Unnamed (Back).jpg">
@@ -254,8 +326,8 @@
   </div>
   <div class="plate">
 
-    <h2><strong>Page Description</strong></h2>
-    <p><span style="color: antiquewhite;  font-size: 25; ">
+    <h2><strong>General Info.</strong></h2>
+    <p><span style="color: antiquewhite; font-size: 18pt; ">
         I'm showing off and explaining some of my favorite cards from my game. IDK if its crazy how attached I am to
         some of these cards but I've stared at them for so long so
         <em>cope</em>. I want this page to be like an archive of all my favorite cards and where more details about them
@@ -264,7 +336,7 @@
     </p>
 
     <h2><strong>Card Overview</strong></h2>
-    <p><span style="color: antiquewhite;  font-size: 22; "> All of the cards are from my version of the game
+    <p><span style="color: antiquewhite; font-size: 15pt;"> All of the cards are from my version of the game
         "chesticuffs" that I am developing. These are assests for the digital and physical versions of the game.
         I made them myself and I love them very much. Some of the concepts of the cards were thought up with my friends
         and have the silliest backstory. Like one card is called <em>"Newton's Apple"</em>.
@@ -272,15 +344,16 @@
         could be turned into cards.
       </span> 
     </p>
+    <p><span style="color: antiquewhite; font-size: 15pt;">Sadly the cards before 2022 have been lost to time</span></p>
 
-    <h2><strong>Motivations</strong></h2>
-    <p><span style="color: antiquewhite;  font-size: 22; ">I just wanted an exuse to combine Minecraft and card games. I
+    <h2><strong>Motivation</strong></h2>
+    <p><span style="color: antiquewhite; font-size: 15pt;">I just wanted an exuse to combine Minecraft and card games. I
         like playing cards because it's a really fun way to be idle. I usually prefer
         casino games, but I couldn't figure out how to make a poker version of Minecraft so I settled for something
         different. <em>I might come back to that thought though because it sounds funny.</em>
       </span>
     </p>
-    <p><span style="color: antiquewhite;  font-size: 22; ">
+    <p><span style="color: antiquewhite; font-size: 15pt; ">
       UPDATE: I figured out how to make a poker version. I can make 13 cards for each main type and have a seperate deck for support items then rng make hands and combos
       much like poker. I can do the same rules for calulations but otherwise its been <em>poker-ized</em>.
       </span> 
@@ -290,8 +363,9 @@
   <hr />
   <h1><span style = "font-family: 'Jersey 15';">UPDATES</span></h1>
   <div class="tab">
-    <button class="tablinks" onclick="openUpdate(event, '2024_04_05')">2024_04_05</button>
-    <button class="tablinks" onclick="openUpdate(event, '2024_05_01')">2024_05_01</button>
+    <button class="tablinks"  ondblclick="getUpdateImages('2024_04_05')" onclick="openUpdate(event, '2024_04_05')">2024_04_05</button>
+    <button class="tablinks" ondblclick="getUpdateImages('2024_05_01')" onclick="openUpdate(event, '2024_05_01')">2024_05_01</button>
+    <button class ="tablinks" ondblclick="emptyUpdate()" onclick="openUpdate(event, ' ')">X</button>
   </div>
   <div class = "tabcontent" id = "2024_04_05">
     <h2>CARDS 2024_04_05</h2>
@@ -299,81 +373,46 @@
       <h3>Plants</h3>
       <div class = "cardScroll" id = "plant">
         <img src = "images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg">
-        <img src = "">
-        <img src = "images/2024_04_05/2 - Player can evolve to [Gourd] if 2 [Gourd Seeds] (Front).jpg">
-        <img src = "images/2024_04_05/3 - Gourd for your Guard (Front).jpg">
-        <img src = "images/2024_04_05/4 - buff [Plant] types +1 DEF when set as CORE (Front).jpg">
-        <img src = "images/2024_04_05/5 - Evolution from Wheat, for every Wheat in play +1 ATK & DEF (Front).jpg">
-        <img src = "images/2024_04_05/6 - The original building blocks (Front).jpg">
-        <img src = "images/2024_04_05/7 - 3 [Wheat] to evolve to 1 [Haybale] (Front).jpg">
-        <img src = "images/2024_04_05/8 - Adds +2 Def to farm Vanishes after calculation (Front).jpg">
         
       </div>
       <h3>Water</h3>
       <div class = "cardScroll" id = "water">
        <img src = "images/3 - Unnamed (Back).jpg">
-       <img src = "images/2024_04_05/9 - Unnamed (Front).jpg">
-       <img src = "images/2024_04_05/10 - Unnamed (Front).jpg">
-       <img src = "images/2024_04_05/11 - Unnamed (Front).jpg">
-       <img src = "images/2024_04_05/12 - Unnamed (Front).jpg">
 
       </div>
       <h3>Tool</h3>
       <div class = "cardScroll" id = "tool">
         <img src = "images/3 - Unnamed (Back).jpg">
-        <img src = "images/2024_04_05/13 - Throw it, hit something, repeat (Front).jpg">
-        <img src = "images/2024_04_05/14 - If set with another [Precious], gain +1 DEF (Front).jpg">
-        <img src = "images/2024_04_05/15 - For every [Farming] card gain +1 DEF (Front).jpg">
-        <img src = "images/2024_04_05/16 - Bring a sword if you expect a fight, bring a spade if you intend to win (Front).jpg">
-        <img src = "images/2024_04_05/17 - [Ore] get +2 DEF (Front).jpg">
-        <img src = "images/2024_04_05/18 - If set as CORE, +3 ATK to Tool (Front).jpg">
+        
       </div>
       <h3>Flower</h3>
       <div class = "cardScroll" id = "flower">
         <img src = "images/3 - Unnamed (Back).jpg">
-        <img src = "images/2024_04_05/19 - Limp but pretty (Front).jpg">
-        <img src = "images/2024_04_05/20 - If set as CORE all [Flowers] get +1 ATK (Front).jpg">
-        <img src = "images/2024_04_05/21 - Cards in the same position get +2 Atk (Front).jpg">
-        <img src = "images/2024_04_05/22 - Dandelion fluff gets all over stuff (Front).jpg">
+        
       </div>
       <h3>Farm</h3>
       <div class = "cardScroll" id = "farm">
         <img src = "images/3 - Unnamed (Back).jpg">
-        <img src = "images/2024_04_05/23 - Unnamed (Front).jpg">
-        <img src = "images/2024_04_05/24 - Unnamed (Front).jpg">
-        <img src = "images/2024_04_05/25 - Unnamed (Front).jpg">
-        <img src = "images/2024_04_05/26 - Unnamed (Front).jpg">
+        
       </div>
 
       <h2>Support Cards</h2>
       <h3>Items</h3>
       <div class = "cardScroll" id = "supportItem">
         <img src = "images/3 - Unnamed (Back).jpg">
-        <img src = "images/2024_04_05/31 - _size=30_ When 2 [Door] are put in U-Atk any card in between gets +2 U-ATK + cor (Front).jpg">
-        <img src = "images/2024_04_05/32 - Coin flip chance to remove one card from play on opponent's side (Front).jpg">
-        <img src = "images/2024_04_05/33 - Enemy Uber ATK -1 ATK (Front).jpg">
-        <img src = "images/2024_04_05/34 - Adds 3 DEF to a card If set as CORE it adds 1 extra DEF point to U-ATK and ATK (Front).jpg">
-        <img src = "images/2024_04_05/35 - [Name] an enemy's card to steal it (Front).jpg">
+        
       </div>
       <h3>Metal + Ore</h3>
       <div class = "cardScroll" id = "supportMetal">
         <img src = "images/3 - Unnamed (Back).jpg">
-        <img src = "images/2024_04_05/27 - Iron (Front).jpg">
-        <img src = "images/2024_04_05/28 - Iron Ore (Front).jpg">
-        <img src = "images/2024_04_05/29 - Gold (Front).jpg">
-        <img src = "images/2024_04_05/30 - Gold Ore (Front).jpg">
+        
       </div>
 
       <h2>Special Cards</h2>
       <h3>Combo</h3>
       <div class = "cardScroll" id = "combos">
         <img src = "images/2024_04_05/36 - Unnamed (Back).jpg">
-        <img src = "images/2024_04_05/36 - Unnamed (Front).jpg">
-        <img src = "images/2024_04_05/37 - Unnamed (Front).jpg">
-        <img src = "images/2024_04_05/38 - Unnamed (Front).jpg">
-        <img src = "images/2024_04_05/39 - Unnamed (Front).jpg">
-        <img src = "images/2024_04_05/40 - Unnamed (Front).jpg">
-        <img src = "images/2024_04_05/41 - Unnamed (Front).jpg">
+        
       </div>
     </div>
   </div>

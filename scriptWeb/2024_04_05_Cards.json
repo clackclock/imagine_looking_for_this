@@ -3,225 +3,260 @@
         {
             "name": "regularBack",
             "type": "Plant",
-            "imgLink": "scriptWeb/images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg"
+            "imgLink": "../scriptWeb/images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg"
         },
         {
             "name": "Wheat_Seeds",
             "type": "Plant",
-            "imgLink": "scriptWeb/images/0 - Sow victory, reap the benefits (Front).jpg"
+            "imgLink": "../scriptWeb/images/0 - Sow victory, reap the benefits (Front).jpg"
         },
         {
             "name": "Sapling",
             "type": "Plant",
-            "imgLink": "scriptWeb/images/2024_04_05/1 - If 2 [Saplings] are in play, evolve to [Planks] (Front).jpg"
+            "imgLink": "../scriptWeb/images/2024_04_05/1 - If 2 [Saplings] are in play, evolve to [Planks] (Front).jpg"
         },
         {
             "name": "Gourd_Seeds",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/2 - Player can evolve to [Gourd] if 2 [Gourd Seeds] (Front).jpg"
         },
         {
             "name": "Gourd",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/3 - Gourd for your Guard (Front).jpg"
         },
         {
             "name": "Apple",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/4 - buff [Plant] types +1 DEF when set as CORE (Front).jpg"
         },
         {
             "name": "HayBale",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/5 - Evolution from Wheat, for every Wheat in play +1 ATK & DEF (Front).jpg"
         },
         {
             "name": "Planks",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/6 - The original building blocks (Front).jpg"
         },
         {
             "name": "Wheat",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/7 - 3 [Wheat] to evolve to 1 [Haybale] (Front).jpg"
         },
         {
             "name": "Newton's_Apple",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/8 - Adds +2 Def to farm Vanishes after calculation (Front).jpg"
         },
         
 
         {
+            "name": "regularBack",
+            "type": "Water",
+            "imgLink": "../scriptWeb/images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg"
+        },
+        {
             "name": "Trident",
             "type": "Water",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/9 - Unnamed (Front).jpg"
         },
         {
             "name": "Coral",
             "type": "Water",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/10 - Unnamed (Front).jpg"
         },
         {
             "name": "Kelp",
             "type": "Water",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/11 - Unnamed (Front).jpg"
         },
         {
             "name": "Aquamarine",
             "type": "Water",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/12 - Unnamed (Front).jpg"
         },
 
         {
+            "name": "regularBack",
+            "type": "Tool",
+            "imgLink": "../scriptWeb/images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg"
+        },
+        {
             "name": "Simple_Axe",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/13 - Throw it, hit something, repeat (Front).jpg"
         },
         {
             "name": "Jeweled_Axe",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/14 - If set with another [Precious], gain +1 DEF (Front).jpg"
         },
         {
             "name": "Shears",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/15 - For every [Farming] card gain +1 DEF (Front).jpg"
         },
         {
             "name": "Simple_Spade",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/16 - Bring a sword if you expect a fight, bring a spade if you intend to win (Front).jpg"
         },
         {
             "name": "Furnace",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/17 - [Ore] get +2 DEF (Front).jpg"
         },
         {
             "name": "Anvil",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/18 - If set as CORE, +3 ATK to Tool (Front).jpg"
         },
         
         {
+            "name": "regularBack",
+            "type": "Flower",
+            "imgLink": "../scriptWeb/images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg"
+        },
+        {
             "name": "Flaccid_Flower",
             "type": "Flower",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/19 - Limp but pretty (Front).jpg"
         },
         {
             "name": "Cornflower",
             "type": "Flower",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/20 - If set as CORE all [Flowers] get +1 ATK (Front).jpg"
         },
         {
             "name": "Poppy",
             "type": "Flower",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/21 - Cards in the same position get +2 Atk (Front).jpg"
         },
         {
             "name": "Dandelion",
             "type": "Flower",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/22 - Dandelion fluff gets all over stuff (Front).jpg"
         },
 
         {
+            "name": "regularBack",
+            "type": "Farm",
+            "imgLink": "../scriptWeb/images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg"
+        },
+        {
             "name": "Feather",
             "type": "Farm",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/23 - Unnamed (Front).jpg"
         },
         {
             "name": "Mutton",
             "type": "Farm",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/24 - Unnamed (Front).jpg"
         },
         {
             "name": "Raw_Steak",
             "type": "Farm",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/25 - Unnamed (Front).jpg"
         },
         {
             "name": "Wool",
             "type": "Farm",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/26 - Unnamed (Front).jpg"
         },
 
         {
+            "name": "regularBack",
+            "type": "support_Item",
+            "imgLink": "../scriptWeb/images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg"
+        },
+        {
             "name": "Door",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/31 - _size=30_ When 2 [Door] are put in U-Atk any card in between gets +2 U-ATK + cor (Front).jpg"
         },
         {
             "name": "Fishing_Rod",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/32 - Coin flip chance to remove one card from play on opponent's side (Front).jpg"
         },
         {
             "name": "Bucket_O_Water",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/33 - Enemy Uber ATK -1 ATK (Front).jpg"
         },
         {
             "name": "Healing_Potion",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/34 - Adds 3 DEF to a card If set as CORE it adds 1 extra DEF point to U-ATK and ATK (Front).jpg"
         },
         {
             "name": "NameTag",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/35 - [Name] an enemy's card to steal it (Front).jpg"
         },
 
         {
+            "name": "regularBack",
+            "type": "support_Metal",
+            "imgLink": "../scriptWeb/images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg"
+        },
+        {
             "name": "Iron",
             "type": "support_Metal",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/27 - Iron (Front).jpg"
         },
         {
             "name": "Iron_Ore",
             "type": "support_Metal",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/28 - Iron Ore (Front).jpg"
         },
         {
             "name": "Gold",
             "type": "support_Metal",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/29 - Gold (Front).jpg"
         },
         {
             "name": "Gold_Ore",
             "type": "support_Metal",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/30 - Gold Ore (Front).jpg"
         },
 
         {
+            "name": "regularBack",
+            "type": "Combo",
+            "imgLink": "../scriptWeb/images/2024_04_05/36 - Unnamed (Back).jpg"
+        },
+        {
             "name": "Tree",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/36 - Unnamed (Front).jpg"
         },
         {
             "name": "Flower_Bush",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/37 - Unnamed (Front).jpg"
         },
         {
             "name": "Item_Frame",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/38 - Unnamed (Front).jpg"
         },
         {
             "name": "Stairs",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/39 - Unnamed (Front).jpg"
         },
         {
             "name": "Monument",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/40 - Unnamed (Front).jpg"
         },
         {
             "name": "Apple_Pie",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_04_05/41 - Unnamed (Front).jpg"
         }
 
     ]

@@ -3,226 +3,267 @@
         {
             "name": "regularBack",
             "type": "Plant",
-            "imgLink": "scriptWeb/images/2024_05_01/0_(Back).jpg"
+            "imgLink": "../scriptWeb/images/2024_05_01/0_(Back).jpg"
         },
         {
             "name": "Wheat_Seeds",
             "type": "Plant",
-            "imgLink": "scriptWeb/images/2024_05_01/0_(Front).jpg"
+            "imgLink": "../scriptWeb/images/2024_05_01/0_(Front).jpg"
         },
         {
             "name": "Sapling",
             "type": "Plant",
-            "imgLink": "scriptWeb/images/2024_05_01/1_(Front).jpg"
+            "imgLink": "../scriptWeb/images/2024_05_01/1_(Front).jpg"
         },
         {
             "name": "Gourd_Seeds",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/2_(Front).jpg"
         },
         {
             "name": "Gourd",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/3_(Front).jpg"
         },
         {
             "name": "Apple",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/4_(Front).jpg"
         },
         {
             "name": "HayBale",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/5_(Front).jpg"
         },
         {
             "name": "Planks",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/6_(Front).jpg"
         },
         {
             "name": "Wheat",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/7_(Front).jpg"
         },
         {
             "name": "Newton's_Apple",
             "type": "Plant",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/8_(Front).jpg"
         },
         
 
         {
+            "name": "regularBack",
+            "type": "Water",
+            "imgLink": "../scriptWeb/images/2024_05_01/0_(Back).jpg"
+        },
+        {
             "name": "Trident",
             "type": "Water",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/9_(Front).jpg"
         },
         {
             "name": "Coral",
             "type": "Water",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/10_(Front).jpg"
         },
         {
             "name": "Kelp",
             "type": "Water",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/11_(Front).jpg"
         },
         {
             "name": "Aquamarine",
             "type": "Water",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/12_(Front).jpg"
         },
 
         {
+            "name": "regularBack",
+            "type": "Tool",
+            "imgLink": "../scriptWeb/images/2024_05_01/0_(Back).jpg"
+        },
+        {
             "name": "Simple_Axe",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/13_(Front).jpg"
         },
         {
             "name": "Jeweled_Axe",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/14_(Front).jpg"
         },
         {
             "name": "Shears",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/15_(Front).jpg"
         },
         {
             "name": "Simple_Spade",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/16_(Front).jpg"
         },
         {
             "name": "Furnace",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/17_(Front).jpg"
         },
         {
             "name": "Anvil",
             "type": "Tool",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/18_(Front).jpg"
         },
         
         {
+            "name": "regularBack",
+            "type": "Flower",
+            "imgLink": "../scriptWeb/images/2024_05_01/0_(Back).jpg"
+        },
+        {
             "name": "Flaccid_Flower",
             "type": "Flower",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/19_(Front).jpg"
         },
         {
             "name": "Cornflower",
             "type": "Flower",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/20_(Front).jpg"
         },
         {
             "name": "Poppy",
             "type": "Flower",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/21_(Front).jpg"
         },
         {
             "name": "Dandelion",
             "type": "Flower",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/22_(Front).jpg"
         },
 
         {
+            "name": "regularBack",
+            "type": "Farm",
+            "imgLink": "../scriptWeb/images/2024_05_01/0_(Back).jpg"
+        },
+        {
             "name": "Feather",
             "type": "Farm",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/23_(Front).jpg"
         },
         {
             "name": "Mutton",
             "type": "Farm",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/24_(Front).jpg"
         },
         {
             "name": "Raw_Steak",
             "type": "Farm",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/25_(Front).jpg"
         },
         {
             "name": "Wool",
             "type": "Farm",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/26_(Front).jpg"
         },
 
         {
+            "name": "regularBack",
+            "type": "support_Item",
+            "imgLink": "../scriptWeb/images/2024_05_01/27_(Back).jpg"
+        },
+        {
             "name": "Door",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/31_(Front).jpg"
         },
         {
             "name": "Fishing_Rod",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/32_(Front).jpg"
         },
         {
             "name": "Bucket_O_Water",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/33_(Front).jpg"
         },
         {
             "name": "Healing_Potion",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/34_(Front).jpg"
         },
         {
             "name": "NameTag",
             "type": "support_Item",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/35_(Front).jpg"
+        },
+        {
+            "name": "Fist",
+            "type": "support_Item",
+            "imgLink": "../scriptWeb/images/2024_05_01/36_(Front).jpg"
         },
 
         {
+            "name": "regularBack",
+            "type": "support_Metal",
+            "imgLink": "../scriptWeb/images/2024_05_01/27_(Back).jpg"
+        },
+        {
             "name": "Iron",
             "type": "support_Metal",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/27_(Front).jpg"
         },
         {
             "name": "Iron_Ore",
             "type": "support_Metal",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/28_(Front).jpg"
         },
         {
             "name": "Gold",
             "type": "support_Metal",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/29_(Front).jpg"
         },
         {
             "name": "Gold_Ore",
             "type": "support_Metal",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/30_(Front).jpg"
         },
 
         {
-            "name": "Tree",
+            "name": "regularBack",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/37_(Back).jpg"
         },
         {
             "name": "Flower_Bush",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/37_(Front).jpg"
         },
         {
             "name": "Item_Frame",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/38_(Front).jpg"
         },
         {
             "name": "Stairs",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/39_(Front).jpg"
         },
         {
             "name": "Monument",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/40_(Front).jpg"
         },
         {
             "name": "Apple_Pie",
             "type": "Combo",
-            "imgLink": "scriptWeb/"
+            "imgLink": "../scriptWeb/images/2024_05_01/41_(Front).jpg"
+            
+        },
+        {
+            "name": "Apple_Pie",
+            "type": "Combo",
+            "imgLink": "../scriptWeb/images/2024_05_01/42_(Front).jpg"
+            
         }
-
     ]
 }
