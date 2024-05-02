@@ -17,14 +17,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   
-  <link rel="icon" href="/images/chesticuffs_logo.png">
+  <link rel="icon" href="../images/chesticuffs_logo.png">
   <title>Card Block</title>
   <!--     <link rel="stylesheet" href="/style.css" /> -->
-<!--       <script src="./script.js" defer></script> -->
+  <!--       <script src="./script.js" defer></script> -->
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script> 
-    favButton(); //run our function on load
-
+    $(document).ready(function(){
+      favButton(); //run our function on load
+    })
+    
     function favButton() {
       let f1 = document.getElementById("fav1");
       let f2 = document.getElementById("fav2");
@@ -32,11 +34,12 @@
       let f4 = document.getElementById("fav4");
       let f5 = document.getElementById("fav5");
 
-      for(let i = 1; i < 6; i++){
-        let favStorage = localStorage.getItem("fav"+i)
-        ? JSON.parse(localStorage.getItem("fav"+i))
-        : [];
-      }
+      $(".cardSec img").on("click", function(){
+        let imgSource = $(this).attr("src");
+        console.log(imgSource);
+
+        localStorage.setItem("imgData", imgSource);
+      });
       
     }
     //type="module" src="./index.js"
@@ -70,6 +73,7 @@
       })
       .done(function(data){
         console.log(data.cardList[0].name);
+        emptyUpdate();
         for(let i in data.cardList){
           if(data.cardList[i].type == "Plant"){
             $(".cardSec #plant").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
@@ -331,7 +335,7 @@
         I'm showing off and explaining some of my favorite cards from my game. IDK if its crazy how attached I am to
         some of these cards but I've stared at them for so long so
         <em>cope</em>. I want this page to be like an archive of all my favorite cards and where more details about them
-        can be found.
+        can be found. Past versions of cards will be here as well as different remixes of the cards, which means json hell for me and cool website for y'all.
       </span> 
     </p>
 
@@ -365,7 +369,7 @@
   <div class="tab">
     <button class="tablinks"  ondblclick="getUpdateImages('2024_04_05')" onclick="openUpdate(event, '2024_04_05')">2024_04_05</button>
     <button class="tablinks" ondblclick="getUpdateImages('2024_05_01')" onclick="openUpdate(event, '2024_05_01')">2024_05_01</button>
-    <button class ="tablinks" ondblclick="emptyUpdate()" onclick="openUpdate(event, ' ')">X</button>
+    <button class ="tablinks" onclick="openUpdate(event, ' ')">X</button>
   </div>
   <div class = "tabcontent" id = "2024_04_05">
     <h2>CARDS 2024_04_05</h2>
