@@ -1,0 +1,228 @@
+{
+    "cardList":[
+        {
+            "name": "regularBack",
+            "type": "Plant",
+            "imgLink": "scriptWeb/images/2024_05_01/0_(Back).jpg"
+        },
+        {
+            "name": "Wheat_Seeds",
+            "type": "Plant",
+            "imgLink": "scriptWeb/images/2024_05_01/0_(Front).jpg"
+        },
+        {
+            "name": "Sapling",
+            "type": "Plant",
+            "imgLink": "scriptWeb/images/2024_05_01/1_(Front).jpg"
+        },
+        {
+            "name": "Gourd_Seeds",
+            "type": "Plant",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Gourd",
+            "type": "Plant",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Apple",
+            "type": "Plant",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "HayBale",
+            "type": "Plant",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Planks",
+            "type": "Plant",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Wheat",
+            "type": "Plant",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Newton's_Apple",
+            "type": "Plant",
+            "imgLink": "scriptWeb/"
+        },
+        
+
+        {
+            "name": "Trident",
+            "type": "Water",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Coral",
+            "type": "Water",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Kelp",
+            "type": "Water",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Aquamarine",
+            "type": "Water",
+            "imgLink": "scriptWeb/"
+        },
+
+        {
+            "name": "Simple_Axe",
+            "type": "Tool",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Jeweled_Axe",
+            "type": "Tool",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Shears",
+            "type": "Tool",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Simple_Spade",
+            "type": "Tool",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Furnace",
+            "type": "Tool",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Anvil",
+            "type": "Tool",
+            "imgLink": "scriptWeb/"
+        },
+        
+        {
+            "name": "Flaccid_Flower",
+            "type": "Flower",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Cornflower",
+            "type": "Flower",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Poppy",
+            "type": "Flower",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Dandelion",
+            "type": "Flower",
+            "imgLink": "scriptWeb/"
+        },
+
+        {
+            "name": "Feather",
+            "type": "Farm",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Mutton",
+            "type": "Farm",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Raw_Steak",
+            "type": "Farm",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Wool",
+            "type": "Farm",
+            "imgLink": "scriptWeb/"
+        },
+
+        {
+            "name": "Door",
+            "type": "support_Item",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Fishing_Rod",
+            "type": "support_Item",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Bucket_O_Water",
+            "type": "support_Item",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Healing_Potion",
+            "type": "support_Item",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "NameTag",
+            "type": "support_Item",
+            "imgLink": "scriptWeb/"
+        },
+
+        {
+            "name": "Iron",
+            "type": "support_Metal",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Iron_Ore",
+            "type": "support_Metal",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Gold",
+            "type": "support_Metal",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Gold_Ore",
+            "type": "support_Metal",
+            "imgLink": "scriptWeb/"
+        },
+
+        {
+            "name": "Tree",
+            "type": "Combo",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Flower_Bush",
+            "type": "Combo",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Item_Frame",
+            "type": "Combo",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Stairs",
+            "type": "Combo",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Monument",
+            "type": "Combo",
+            "imgLink": "scriptWeb/"
+        },
+        {
+            "name": "Apple_Pie",
+            "type": "Combo",
+            "imgLink": "scriptWeb/"
+        }
+
+    ]
+}

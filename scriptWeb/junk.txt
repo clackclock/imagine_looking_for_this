@@ -1,0 +1,38 @@
+    <p> <span style="color: antiquewhite;  font-size: 18"> <em> This first group of cards was the first one I developed
+          and/or designed and planned for and got attached to. Featuring the plant types, a character card, and the back
+          of all the regular playing cards. </em> </span> 
+    </p>
+
+    <div class="person">
+
+      <img
+        src="https://cdn.glitch.global/f6774d5a-1407-411f-bb1c-032b2a62b733/0%20-%20Sow%20victory%2C%20reap%20the%20benefits%20(Front).jpg?v=1693438761875" />
+      <img
+        src="https://cdn.glitch.global/f6774d5a-1407-411f-bb1c-032b2a62b733/20%20-%20Plucked%20fresh%20to%20tickle%20or%20stab%20(Front).jpg?v=1693438763609" />
+      <img src="./images/4 - buff all [Plant] types +1 DEF when set as CORE (Front).jpg" />
+      <img src="./images/5 - Evolution from Wheat, all Wheat in play +1 ATK & DEF (Front).jpg" />
+      <img
+        src="https://cdn.glitch.global/f6774d5a-1407-411f-bb1c-032b2a62b733/35%20-%20Unnamed%20(Front).jpg?v=1693438760737" />
+      <img src="./images/3 - Unnamed (Back).jpg" />
+
+    </div>
+
+
+    <p> <span style="color: antiquewhite"> <em> These are my favorite water types that I feel like turned out well.
+          Sadly they do not counter plants in any way
+          but they give me joy by being water themed.
+        </em> </span>
+    </p>
+
+    <div class="person">
+
+      <img src="./images/1 - Unnamed (Front).jpg" />
+      <img src="./images/3 - Unnamed (Front).jpg" />
+      <img src="./images/3 - Unnamed (Back).jpg" />
+
+    </div>
+
+    
+    <p class = "test"><span style="color: antiquewhite">I wanted a more water color vibe but I think these turned out really
+      well.</span>
+    </p>
