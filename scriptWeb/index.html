@@ -23,9 +23,27 @@
   <!--       <script src="./script.js" defer></script> -->
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script> 
+    $(document).ready( function(){
+      $(".cardSec img").on('click', function(){
+        let re = $(this).attr("src");
+        console.log(re);
+
+        $(".Top5 img").on('click', function(){
+          $(this).attr("src", re);
+        })
+      })
+
+    })
+
     clickCounter(); //run our function on load
 
     function clickCounter() {
+      let f1 = document.getElementById("fav1");
+      let f2 = document.getElementById("fav2");
+      let f3 = document.getElementById("fav3");
+      let f4 = document.getElementById("fav4");
+      let f5 = document.getElementById("fav5");
+      
       if (localStorage.topFive) { //check it exists
         for(let i in localStorage.topFive){
           if(localStorage.topFive[i] == 0){
@@ -73,7 +91,24 @@
       document.getElementById(versionDate).style.display = "block";
       evt.currentTarget.className += " active";
     }
-
+    function openInfo(evt, versionDate) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent_2");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(versionDate).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
     function getUpdateImages(versionDate){
       let cdataURL = '../scriptWeb/'+versionDate+'_Cards.json';
       $.ajax({
@@ -132,7 +167,8 @@
     body {
       background-image: url("../scriptWeb/images/home-library.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 100% 100%;
+      min-height: 100vh;
       background-color: #caf0f8;
       /* color: #03045e; */
       margin: 10px;
@@ -229,6 +265,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      width:100%;
     }
 
     .cardSec{
@@ -319,6 +356,17 @@
       margin-bottom:30px;
       padding-bottom: 10px;
     }
+    .tabcontent_2 {
+      display: none;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(38, 24, 35, 0.7);
+    }
+    #General{
+      display:block;
+    }
 
     .jersey-15-regular {
       font-family: "Jersey 15", sans-serif;
@@ -339,8 +387,14 @@
     <img id = "fav4" src = "images/3 - Unnamed (Back).jpg">
     <img id = "fav5" src = "images/3 - Unnamed (Back).jpg">
   </div>
-  <div class="plate">
 
+  <div class= "tab">
+    <button class="tablinks"  onclick="openInfo(event, 'General')">General Info</button>
+    <button class="tablinks"  onclick="openInfo(event, 'Overview')">Overview</button>
+    <button class ="tablinks" onclick="openInfo(event, 'Motivate')">Motivations</button>
+    <button class ="tablinks" onclick="openInfo(event, ' ')">X</button>
+  </div>
+  <div  class="plate tabcontent_2" id = "General">
     <h2><strong>General Info.</strong></h2>
     <p><span style="color: antiquewhite; font-size: 18pt; ">
         I'm showing off and explaining some of my favorite cards from my game. IDK if its crazy how attached I am to
@@ -349,7 +403,8 @@
         can be found. Past versions of cards will be here as well as different remixes of the cards, which means json hell for me and cool website for y'all.
       </span> 
     </p>
-
+  </div>
+  <div class="plate tabcontent_2" id = "Overview">
     <h2><strong>Card Overview</strong></h2>
     <p><span style="color: antiquewhite; font-size: 15pt;"> All of the cards are from my version of the game
         "chesticuffs" that I am developing. These are assests for the digital and physical versions of the game.
@@ -360,7 +415,8 @@
       </span> 
     </p>
     <p><span style="color: antiquewhite; font-size: 15pt;">Sadly the cards before 2022 have been lost to time</span></p>
-
+  </div>
+  <div class="plate tabcontent_2" id = "Motivate">
     <h2><strong>Motivation</strong></h2>
     <p><span style="color: antiquewhite; font-size: 15pt;">I just wanted an exuse to combine Minecraft and card games. I
         like playing cards because it's a really fun way to be idle. I usually prefer
@@ -374,6 +430,7 @@
       </span> 
     </p>
   </div>
+  
 
   <hr />
   <h1><span style = "font-family: 'Jersey 15';">UPDATES</span></h1>
@@ -382,97 +439,99 @@
     <button class="tablinks" ondblclick="getUpdateImages('2024_05_01')" onclick="openUpdate(event, '2024_05_01')">2024_05_01</button>
     <button class ="tablinks" onclick="openUpdate(event, ' ')">X</button>
   </div>
-  <div class = "tabcontent" id = "2024_04_05">
-    <h2>CARDS 2024_04_05</h2>
-    <div class = "cardSec">
-      <h3>Plants</h3>
-      <div class = "cardScroll" id = "plant">
-        <img src = "images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg">
-        
-      </div>
-      <h3>Water</h3>
-      <div class = "cardScroll" id = "water">
-       <img src = "images/3 - Unnamed (Back).jpg">
+  <main>
+    <div class = "tabcontent" id = "2024_04_05">
+      <h2>CARDS 2024_04_05</h2>
+      <div class = "cardSec">
+        <h3>Plants</h3>
+        <div class = "cardScroll" id = "plant">
+          <img src = "images/2024_04_05/0 - Sow victory, reap the benefits (Back).jpg">
+          
+        </div>
+        <h3>Water</h3>
+        <div class = "cardScroll" id = "water">
+        <img src = "images/3 - Unnamed (Back).jpg">
 
-      </div>
-      <h3>Tool</h3>
-      <div class = "cardScroll" id = "tool">
-        <img src = "images/3 - Unnamed (Back).jpg">
-        
-      </div>
-      <h3>Flower</h3>
-      <div class = "cardScroll" id = "flower">
-        <img src = "images/3 - Unnamed (Back).jpg">
-        
-      </div>
-      <h3>Farm</h3>
-      <div class = "cardScroll" id = "farm">
-        <img src = "images/3 - Unnamed (Back).jpg">
-        
-      </div>
+        </div>
+        <h3>Tool</h3>
+        <div class = "cardScroll" id = "tool">
+          <img src = "images/3 - Unnamed (Back).jpg">
+          
+        </div>
+        <h3>Flower</h3>
+        <div class = "cardScroll" id = "flower">
+          <img src = "images/3 - Unnamed (Back).jpg">
+          
+        </div>
+        <h3>Farm</h3>
+        <div class = "cardScroll" id = "farm">
+          <img src = "images/3 - Unnamed (Back).jpg">
+          
+        </div>
 
-      <h2>Support Cards</h2>
-      <h3>Items</h3>
-      <div class = "cardScroll" id = "supportItem">
-        <img src = "images/3 - Unnamed (Back).jpg">
-        
-      </div>
-      <h3>Metal + Ore</h3>
-      <div class = "cardScroll" id = "supportMetal">
-        <img src = "images/3 - Unnamed (Back).jpg">
-        
-      </div>
+        <h2>Support Cards</h2>
+        <h3>Items</h3>
+        <div class = "cardScroll" id = "supportItem">
+          <img src = "images/3 - Unnamed (Back).jpg">
+          
+        </div>
+        <h3>Metal + Ore</h3>
+        <div class = "cardScroll" id = "supportMetal">
+          <img src = "images/3 - Unnamed (Back).jpg">
+          
+        </div>
 
-      <h2>Special Cards</h2>
-      <h3>Combo</h3>
-      <div class = "cardScroll" id = "combos">
-        <img src = "images/2024_04_05/36 - Unnamed (Back).jpg">
-        
+        <h2>Special Cards</h2>
+        <h3>Combo</h3>
+        <div class = "cardScroll" id = "combos">
+          <img src = "images/2024_04_05/36 - Unnamed (Back).jpg">
+          
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class = "tabcontent" id = "2024_05_01">
-    <h2>CARDS 2024_05_01</h2>
-    <div class = "cardSec">
-      <h3>Plants</h3>
-      <div class = "cardScroll" id = "plant">
-        <img src = "images/2024_05_01/0_(Back).jpg">
-      </div>
-      <h3>Water</h3>
-      <div class = "cardScroll" id = "water">
-        <img src = "images/2024_05_01/0_(Back).jpg">
-      </div>
-      <h3>Tool</h3>
-      <div class = "cardScroll" id = "tool">
-        <img src = "images/2024_05_01/0_(Back).jpg">
-      </div>
-      <h3>Flower</h3>
-      <div class = "cardScroll" id = "flower">
-        <img src = "images/2024_05_01/0_(Back).jpg">
-      </div>
-      <h3>Farm</h3>
-      <div class = "cardScroll" id = "farm">
-        <img src = "images/2024_05_01/0_(Back).jpg">
-      </div>
+    <div class = "tabcontent" id = "2024_05_01">
+      <h2>CARDS 2024_05_01</h2>
+      <div class = "cardSec">
+        <h3>Plants</h3>
+        <div class = "cardScroll" id = "plant">
+          <img src = "images/2024_05_01/0_(Back).jpg">
+        </div>
+        <h3>Water</h3>
+        <div class = "cardScroll" id = "water">
+          <img src = "images/2024_05_01/0_(Back).jpg">
+        </div>
+        <h3>Tool</h3>
+        <div class = "cardScroll" id = "tool">
+          <img src = "images/2024_05_01/0_(Back).jpg">
+        </div>
+        <h3>Flower</h3>
+        <div class = "cardScroll" id = "flower">
+          <img src = "images/2024_05_01/0_(Back).jpg">
+        </div>
+        <h3>Farm</h3>
+        <div class = "cardScroll" id = "farm">
+          <img src = "images/2024_05_01/0_(Back).jpg">
+        </div>
 
-      <h2>Support Cards</h2>
-      <h3>Items</h3>
-      <div class = "cardScroll" id = "supportItem">
-        <img src = "images/2024_05_01/27_(Back).jpg">
-      </div>
-      <h3>Metal + Ore</h3>
-      <div class = "cardScroll" id = "supportMetal">
-        <img src = "images/2024_05_01/27_(Back).jpg">
-      </div>
+        <h2>Support Cards</h2>
+        <h3>Items</h3>
+        <div class = "cardScroll" id = "supportItem">
+          <img src = "images/2024_05_01/27_(Back).jpg">
+        </div>
+        <h3>Metal + Ore</h3>
+        <div class = "cardScroll" id = "supportMetal">
+          <img src = "images/2024_05_01/27_(Back).jpg">
+        </div>
 
-      <h2>Special Cards</h2>
-      <h3>Combo</h3>
-      <div class = "cardScroll" id = "combos">
-        <img src = "images/2024_05_01/37_(Back).jpg">
+        <h2>Special Cards</h2>
+        <h3>Combo</h3>
+        <div class = "cardScroll" id = "combos">
+          <img src = "images/2024_05_01/37_(Back).jpg">
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <hr />
 </body>
