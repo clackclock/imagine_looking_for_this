@@ -43,33 +43,13 @@
       let f3 = document.getElementById("fav3");
       let f4 = document.getElementById("fav4");
       let f5 = document.getElementById("fav5");
-      
-      if (localStorage.topFive) { //check it exists
-        for(let i in localStorage.topFive){
-          if(localStorage.topFive[i] == 0){
-            localStorage.topFive[i] = 1;
-          }
-        }
-      } else { //otherwise start at 1
-        localStorage.topFive = [0,0,0,0,0];
-      }
-      console.log(localStorage.topFive[0]);
+
+      var topFive = [];
+      topFive = ["images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg"];
+      localStorage.setItem("topFive", JSON.stringify(topFive));
+
+      console.log(localStorage.getItem("topFive"));
     }
-    
-    // function favSelector() {
-    //   // let f1 = document.getElementById("fav1");
-    //   // let f2 = document.getElementById("fav2");
-    //   // let f3 = document.getElementById("fav3");
-    //   // let f4 = document.getElementById("fav4");
-    //   // let f5 = document.getElementById("fav5");
-
-    //   $("img").on("click", function(){
-    //     let clickImg = $(this).attr("src");
-    //     console.log(clickImg);
-
-    //     localStorage.setItem("imgData", clickImg);
-    //   });
-    // }
 
     //type="module" src="./index.js"
     // import data from "scriptWeb/2024_04_05_Cards.json" assert { type: 'json' };
