@@ -33,7 +33,7 @@
         })
       })
 
-    })
+    });
 
     clickCounter(); //run our function on load
 
@@ -47,6 +47,8 @@
       var topFive = [];
       topFive = ["images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg"];
       localStorage.setItem("topFive", JSON.stringify(topFive));
+
+      
 
       console.log(localStorage.getItem("topFive"));
     }
