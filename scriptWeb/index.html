@@ -24,34 +24,49 @@
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script> 
     $(document).ready( function(){
+      //let lol = localStorage.getItem("Five1");
+      
+      if(!localStorage.getItem("fav1")){
+        let topFive = ["images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg"];
+        localStorage.setItem("fav1", topFive[0]);
+        localStorage.setItem("fav2", topFive[1]);
+        localStorage.setItem("fav3", topFive[2]);
+        localStorage.setItem("fav4", topFive[3]);
+        localStorage.setItem("fav5", topFive[4]);
+      }
+   
+      $(".Top5 #fav1").attr("src", localStorage.getItem("fav1"));
+      $(".Top5 #fav2").attr("src", localStorage.getItem("fav2"));
+      $(".Top5 #fav3").attr("src", localStorage.getItem("fav3"));
+      $(".Top5 #fav4").attr("src", localStorage.getItem("fav4"));
+      $(".Top5 #fav5").attr("src", localStorage.getItem("fav5"));
+
+      console.log(localStorage.getItem("fav1"));
+
       $(".cardSec img").on('click', function(){
         let re = $(this).attr("src");
         console.log(re);
 
         $(".Top5 img").on('click', function(){
           $(this).attr("src", re);
+          let o = 1;
+          let placed = false;
+          while(!placed){
+            if(localStorage.getItem("fav"+o+"") == "images/3 - Unnamed (Back).jpg" ){
+              localStorage.setItem("fav"+o+"", re);
+              placed = true;
+            }
+            o++;
+            //console.log(localStorage.getItem("Five"+o+""));
+          }
         })
+      })
+      $(".Top5 img").on('dblclick', function(){
+        $(this).attr("src", "images/3 - Unnamed (Back).jpg");
+        localStorage.setItem(""+$(this).attr("id")+"", "images/3 - Unnamed (Back).jpg");
       })
 
     });
-
-    clickCounter(); //run our function on load
-
-    function clickCounter() {
-      let f1 = document.getElementById("fav1");
-      let f2 = document.getElementById("fav2");
-      let f3 = document.getElementById("fav3");
-      let f4 = document.getElementById("fav4");
-      let f5 = document.getElementById("fav5");
-
-      var topFive = [];
-      topFive = ["images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg","images/3 - Unnamed (Back).jpg"];
-      localStorage.setItem("topFive", JSON.stringify(topFive));
-
-      
-
-      console.log(localStorage.getItem("topFive"));
-    }
 
     //type="module" src="./index.js"
     // import data from "scriptWeb/2024_04_05_Cards.json" assert { type: 'json' };
@@ -248,6 +263,10 @@
       justify-content: center;
       align-items: center;
       width:100%;
+      overflow-x: auto;
+    }
+    .Top5:hover{
+      height:400px;
     }
 
     .cardSec{
