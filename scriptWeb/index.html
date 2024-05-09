@@ -175,13 +175,10 @@
     h1, h2, h3{
       color: antiquewhite;
       margin-left: 15px;
+      font-family: "Jersey 15", sans-serif;
     }
     h2 {
       font-family: Climate Crisis;
-    }
-    h3 {
-      font-family: Sanburg;
-      /* src: url(https://cdn.glitch.global/1d2842b8-29f1-4aa4-8843-ee4e6eeec9de/Sansburg.ttf?v=1677706583973); */
     }
     p {
       padding-inline-start: 10px;
@@ -262,10 +259,15 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      width:100%;
+      width: auto;
       overflow-x: auto;
+      overflow-y: hidden;
+      overflow-wrap: unset;
+
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
     }
-    .Top5:hover{
+    .Top5:active{
       height:400px;
     }
 
@@ -291,6 +293,7 @@
       width: 70%;
       overflow-x: auto;
       overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
 
       /* transition: transform .2s; */
     }
@@ -380,7 +383,7 @@
 
 <body>
   <h1>Basically, I'm Showing Off My <i>Deck</i></h1>
-  <h3>Top 5 Cards:</h3>
+  <h3><span style = "border-radius: 15%; background-color:rgba(0, 0, 0, 0.507); font-size: 18pt;"><u>My Top 5 Cards</u></span>:</h3>
   <div class = "Top5">
     <img id = "fav1" src = "images/3 - Unnamed (Back).jpg">
     <img id = "fav2" src = "images/3 - Unnamed (Back).jpg">
@@ -398,7 +401,13 @@
   <div  class="plate tabcontent_2" id = "General">
     <h2><strong>General Info.</strong></h2>
     <p><span style="color: antiquewhite; font-size: 18pt; ">
-        I'm showing off and explaining some of my favorite cards from my game. IDK if its crazy how attached I am to
+        These are most of the versions of the cards from [Chest-i-cuffs]. On this site you can 
+        save your top 5 favorite cards from any of the versions at the top of the site to show off 
+        to your lessers. You can double click the cards at the top to remove from.
+      </span>
+    </p>
+    <p><span style="color: antiquewhite; font-size: 18pt; ">
+        I wanted to show off some of my favorite cards from my game. IDK if its crazy how attached I am to
         some of these cards but I've stared at them for so long so
         <em>cope</em>. I want this page to be like an archive of all my favorite cards and where more details about them
         can be found. Past versions of cards will be here as well as different remixes of the cards, which means json hell for me and cool website for y'all.
@@ -407,7 +416,8 @@
   </div>
   <div class="plate tabcontent_2" id = "Overview">
     <h2><strong>Card Overview</strong></h2>
-    <p><span style="color: antiquewhite; font-size: 15pt;"> All of the cards are from my version of the game
+    <p><span style="color: antiquewhite; font-size: 15pt;"> 
+        All of the cards are from my version of the game
         "chesticuffs" that I am developing. These are assests for the digital and physical versions of the game.
         I made them myself and I love them very much. Some of the concepts of the cards were thought up with my friends
         and have the silliest backstory. Like one card is called <em>"Newton's Apple"</em>.
@@ -434,7 +444,8 @@
   
 
   <hr />
-  <h1><span style = "font-family: 'Jersey 15';">UPDATES</span></h1>
+  <h1><span style = "font-family: 'Jersey 15';">VERSIONS</span></h1>
+  <p><span style = "border-radius: 15%; background-color:rgba(0, 0, 0, 0.507); font-family: 'Jersey 15'; font-size: 18pt; color:antiquewhite">Below are the dates for when each set of cards were changed and saved. Double click to view the cards</span></p>
   <div class="tab">
     <button class="tablinks"  ondblclick="getUpdateImages('2024_04_05')" onclick="openUpdate(event, '2024_04_05')">2024_04_05</button>
     <button class="tablinks" ondblclick="getUpdateImages('2024_05_01')" onclick="openUpdate(event, '2024_05_01')">2024_05_01</button>
