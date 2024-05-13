@@ -43,6 +43,14 @@
 
       console.log(localStorage.getItem("fav1"));
 
+      $(".Top5 img").on('dblclick', function(){
+        $(this).attr("src", "images/3 - Unnamed (Back).jpg");
+        localStorage.setItem(""+$(this).attr("id")+"", "images/3 - Unnamed (Back).jpg");
+      })
+
+    });
+
+    function test(){
       $(".cardSec img").on('click', function(){
         let re = $(this).attr("src");
         console.log(re);
@@ -52,21 +60,16 @@
           let o = 1;
           let placed = false;
           
-          for (let index = 0; index < 5; index++) {
+          for (let index = 1; index < 6; index++) {
             
             if(localStorage.getItem("fav"+index+"") == "images/3 - Unnamed (Back).jpg"){
               localStorage.setItem("fav"+index+"", re);
             }
-          //  console.log(localStorage.getItem("Five"+index+""));
+            //  console.log(localStorage.getItem("Five"+index+""));
           }
         })
       })
-      $(".Top5 img").on('dblclick', function(){
-        $(this).attr("src", "images/3 - Unnamed (Back).jpg");
-        localStorage.setItem(""+$(this).attr("id")+"", "images/3 - Unnamed (Back).jpg");
-      })
-
-    });
+    }
 
     //type="module" src="./index.js"
     // import data from "scriptWeb/2024_04_05_Cards.json" assert { type: 'json' };
@@ -119,14 +122,14 @@
         emptyUpdate();
         for(let i in data.cardList){
           if(data.cardList[i].type == "Plant"){
-            var img = $('<img id="test">'); //Equivalent: $(document.createElement('img'))
-            img.attr('src', function(index, originFunc){
-              originFunc = data.cardList[index].imgLink;
-              index++;
-              return originFunc;
-            });
-            img.appendTo('.cardSec #plant');
-            // $(".cardSec #plant").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
+            // var img = $('<img id="test">'); //Equivalent: $(document.createElement('img'))
+            // img.attr('src', function(index, originFunc){
+            //   originFunc = data.cardList[index].imgLink;
+            //   index++;
+            //   return originFunc;
+            // });
+            // img.appendTo('.cardSec #plant');
+            $(".cardSec #plant").append("<img onclick = 'test()' alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
           }
           if(data.cardList[i].type == "Water"){
             $(".cardSec #water").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
@@ -264,10 +267,10 @@
     .Top5{
       display:flex;
       flex-direction: row;
-      justify-content: start;
+      justify-content: center;
       align-items: center;
       width: auto;
-      padding: 10%;
+      padding-left: 10cqb;
       overflow-x: auto;
       overflow-y: hidden;
       overflow-wrap: unset;
@@ -421,6 +424,14 @@
         can be found. Past versions of cards will be here as well as different remixes of the cards, which means json hell for me and cool website for y'all.
       </span> 
     </p>
+    <p><span style="color: antiquewhite; font-size: 18pt; background-color: #c29b42;">
+      I'm going to be honest and I DON'T KNOW WHY IT DOES THIS, but to save a picture you need to
+      click an image in plant then click the one you want then click the top five section. After all that
+      it MIGHT save it self if not repeat until it does. BONUS: double click the top five cards a bunch then it might work as well. Double clicking resets the Card
+      so it should just make the site chuckle a bit. If not
+      YOU CAN'T EMAIL ME ANYWAY SO <em>COPE</em>.
+    </span> 
+  </p>
   </div>
   <div class="plate tabcontent_2" id = "Overview">
     <h2><strong>Card Overview</strong></h2>
