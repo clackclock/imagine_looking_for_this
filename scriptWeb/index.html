@@ -51,13 +51,13 @@
           $(this).attr("src", re);
           let o = 1;
           let placed = false;
-          while(!placed){
-            if(localStorage.getItem("fav"+o+"") == "images/3 - Unnamed (Back).jpg" ){
-              localStorage.setItem("fav"+o+"", re);
-              placed = true;
+          
+          for (let index = 0; index < 5; index++) {
+            
+            if(localStorage.getItem("fav"+index+"") == "images/3 - Unnamed (Back).jpg"){
+              localStorage.setItem("fav"+index+"", re);
             }
-            o++;
-            //console.log(localStorage.getItem("Five"+o+""));
+          //  console.log(localStorage.getItem("Five"+index+""));
           }
         })
       })
@@ -119,7 +119,14 @@
         emptyUpdate();
         for(let i in data.cardList){
           if(data.cardList[i].type == "Plant"){
-            $(".cardSec #plant").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
+            var img = $('<img id="test">'); //Equivalent: $(document.createElement('img'))
+            img.attr('src', function(index, originFunc){
+              originFunc = data.cardList[index].imgLink;
+              index++;
+              return originFunc;
+            });
+            img.appendTo('.cardSec #plant');
+            // $(".cardSec #plant").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
           }
           if(data.cardList[i].type == "Water"){
             $(".cardSec #water").append("<img alt = '" + data.cardList[i].name + "' src = '" + data.cardList[i].imgLink + "'>");
@@ -257,9 +264,10 @@
     .Top5{
       display:flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       width: auto;
+      padding: 10%;
       overflow-x: auto;
       overflow-y: hidden;
       overflow-wrap: unset;
@@ -267,7 +275,7 @@
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
-    .Top5:active{
+    .Top5:hover{
       height:400px;
     }
 
