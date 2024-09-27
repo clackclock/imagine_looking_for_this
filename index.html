@@ -14,6 +14,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap" rel="stylesheet"/>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Vast+Shadow&display=swap" rel="stylesheet">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="/script.js" defer></script>
     
@@ -31,43 +35,80 @@
             
         }
         footer{
-            color: #00d9ad;
+            color: #ffa12e;
             font-family: Climate Crisis;
         }
-        h1{
+
+        header h1{
+            font-size: xx-large;
+        }
+        h1 {
             /* font-size: 30px; */
             display: flex;
             justify-content: center;
             align-items: center;
-            color:#4a0d4a;
-            font-family: Climate Crisis;
+            color: rgb(255, 156, 58);
+
+            /* text-decoration-line: underline;
+            text-decoration-color: aliceblue;
+            text-shadow: antiquewhite; */
+            font-family: "Holtwood One SC", serif;
             /* src: url(https://cdn.glitch.global/1d2842b8-29f1-4aa4-8843-ee4e6eeec9de/Sansburg.ttf?v=1677706583973); */
-      
         }
+        h2{
+            color: rgb(255, 156, 58);
+            font-family: "Holtwood One SC", serif;
+        }
+
         p{
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            font-size: 20px;
-            margin:10%;
-            
+            font-size: 15pt;  
         }
-        .wingdings{
-            color:antiquewhite;
-            font-family: Climate Crisis;
-            position: absolute;
-            
-        }
-        .panel{
+
+        #main{
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: row;
+            margin:2%;
+        }
+        #sidePanel{
+            display: flex;
+            flex-direction: column;
+            background-color: beige;
+            color:rgb(186, 112, 0);
+            font-family: "Vast Shadow", serif;
+            margin-right:3%;
+            padding:2%;
+            width:30%;
+
+            border-color: black;
+            border-style: double;
+            border-width: 10px;
+        }
+        #ven{
+            width:60%;
+        }
+        .thoughts{
+            display: flex;
+            /* flex-wrap: wrap; */
             flex-direction: row;
             justify-content: start;
             align-items: center;
+
+            width: 95%;
+            overflow-x: scroll;
+            margin-left: 2%;
+            margin-bottom: 5%;
             /* background: rgb(118, 194, 193,0.2); */
+
+
             
+        }
+        .thoughts::-webkit-scrollbar{
+            display: none;
         }
         .link{
             display: flex;
@@ -75,31 +116,83 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-family: Climate Crisis;
+
+            color:blanchedalmond;
+            font-family: "Vast Shadow", serif;
         }
         img{
             height: 125px;
             width: auto;
         }
         /*  <span style = "background-color:antiquewhite"></span> */
+        .holtwood-one-sc-regular {
+            font-family: "Holtwood One SC", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .vast-shadow-regular {
+            font-family: "Vast Shadow", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
         
     </style>
     <body>
-        <h1>S.Matthews AKA Cluck 's Thought Clouds</h1>
-        <h2>Links</h2>
-        <div class = "panel"> 
-        
-            <div class = "link"> <a href="./now/index.html"><img src = "./images/cloud.png.png"> </a> Now</div>
-            <div class = "link"><a href = "./social_software_blog/index.html"><img src = "./images/cloud.png.png"></a> Blog</div>
-            <div class = "link"><a href = "./scriptWeb/index.html"><img src = "./images/cloud.png.png"></a> Card</div>
-            <div class = "link"><a href = "./scriptWeb/fakeCorp/index.html"><img src = "./images/cloud.png.png"></a> Real Corp.</div>
-            <div class = "link"><a href = "tickTock_clock/index.html"><img src = "tickTock_clock/clock-line-icon.png"></a>Sisyphisian Clock</div>
-            <div class = "link"><a href = "./scriptWeb/momWeather/index.html"><img src = "./scriptWeb/images/weather-icon-png-2.png"></a>Mom's Weather Report</div>
-            <div class = "link"><a href = "./scriptWeb/radio/index.html"><img src = "https://cdn.glitch.global/cb182bcb-4007-424f-a40d-8b8f275fe7c4/1104435.png?v=1712782407985"></a>DIY.FM Radio</div>
+        <header>
+            <h1>MY THOUGHT BUBBLES, YET THE MIND CLOUDS</h1>
+        </header>
+        <!-- <h1>S.Matthews AKA Cluck 's Thought Clouds</h1> -->
+        <div id = "main">
+            <div id = "sidePanel">
+                Welcome to the Hub of Madness; as currated by clockedLuck
+                <p> Here you may find the latest projects and links to my updated works, but no explainations</p>
+                <p><span style="font-family: 'Holtwood One SC', serif;"> NEVER AN EXPLAINATION</span></p>
+                <p>Among my THOUGHTS you may find:</p>
+                <ul>
+                    <li>Now Page</li>
+                    <li>[ABANDONED] Blog</li>
+                    <li>Subversive site</li>
+                    <li>Weather Report (on my campus)</li>
+                    <li>Clock</li>
+                    
+                </ul>
+                <p>In GAMES:</p>
+                <ul>
+                    <li>[UNDER-CONSTRUCTION] Chest-i-cuffs + Info Log</li>
+                    <li>[UNDER-CONSTRUCTION] Gotham: Alfred POV.p8</li>
+                </ul>
+                <p>and once I MUST'VE LOST MY EFFIN MIND:</p>
+                <ul>
+                    <li>radio</li>
+                    <li>[UNDER-CONSTRUCTION] guard comics</li>
+                </ul>
 
+            </div>
+
+            <div id = "ven">
+                <h2><span style="background-color: rgba(240, 255, 255, 0.777); padding: 0.5%;">THOUGHTS</span></h2>
+                <div class = "thoughts"> 
+                    <div class = "link"> <a href="./now/index.html"><img src = "./images/cloud.png.png"> </a> Now</div>
+                    <div class = "link"><a href = "./social_software_blog/index.html"><img src = "./images/cloud.png.png"></a> Blog</div>
+                    <div class = "link"><a href = "./scriptWeb/fakeCorp/index.html"><img src = "./images/cloud.png.png"></a> Real Corp.</div>
+                    <div class = "link"><a href = "./scriptWeb/momWeather/index.html"><img src = "./scriptWeb/images/weather-icon-png-2.png"></a>Mom's Weather Report</div>
+                    <div class = "link"><a href = "tickTock_clock/index.html"><img src = "tickTock_clock/clock-line-icon.png"></a>Sisyphisian Clock</div>
+                </div>
+                <h2><span style="background-color: rgba(240, 255, 255, 0.777); padding: 0.5%;">GAMES</span></h2>
+                <div class = "thoughts">
+                    <div class = "link"><a href = "./scriptWeb/index.html"><img src = "../images/chesticuffs_logo.png"></a> Card</div>
+                    
+                </div>
+                <h2><span style="background-color: rgba(240, 255, 255, 0.777); padding: 0.5%;">I MUST'VE LOST MY EFFIN MIND</span></h2>
+                <div class = "thoughts">
+                    <div class = "link"><a href = "./scriptWeb/radio/index.html"><img src = "https://cdn.glitch.global/cb182bcb-4007-424f-a40d-8b8f275fe7c4/1104435.png?v=1712782407985"></a>DIY.FM Radio</div>
+                </div>
+
+            </div>
+            
         </div>
     
-        <div id="social" class = "wingdings">
+        <div id="social">
             <script
                 type="text/javascript"
                 src="/lee.tusman/assets/js/onionring-variables.js"
