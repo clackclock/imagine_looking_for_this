@@ -21,6 +21,7 @@ function playS1(data) {
     console.log(linkT);
     //  $(".statLogo").css("background-image",src =(linkT));
     $("#r1").attr("src", linkT);
+    $("#r2").attr("href", data.stations[0].website);
     
     var stream = data.stations[0].streamUrl;
     let music = document.getElementById("music");
@@ -45,6 +46,7 @@ function playS2(data) {
 
     //  $(".statLogo").css("background-image",src =(linkT));
     $("#r1").attr("src", linkT);
+    $("#r2").attr("href", data.stations[1].website);
     
     var stream = data.stations[1].streamUrl;
     let music = document.getElementById("music");
@@ -69,6 +71,7 @@ function playS3(data) {
 
     //  $(".statLogo").css("background-image",src =(linkT));
     $("#r1").attr("src", linkT);
+    $("#r2").attr("href", data.stations[3].website);
     
     var stream = data.stations[3].streamUrl;
     let music = document.getElementById("music");
