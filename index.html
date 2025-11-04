@@ -26,106 +26,180 @@
         <title>Head Cloudward</title>
     </head>
     <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body{
+            margin: 0;
+            padding: 0;
+
             background-color: #c7b591;
             background-image: url("./images/Moraine_Lake.jpg");
             background-size: cover;
-            /* background-position: top; */
-            cursor: crosshair;
+            background-attachment: fixed;
+            background-position: center;
             
-        }
-        footer{
-            color: #ffa12e;
-            font-family: Climate Crisis;
-        }
+            cursor: crosshair;
 
-        header h1{
-            font-size: xx-large;
-        }
-        h1 {
-            /* font-size: 30px; */
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: rgb(255, 156, 58);
+            flex-direction: row;
+            min-height: 100vh;
+            min-width: 0;
+        }
+        /* for shame weakling */
+        @media (max-width: 600px) {
+            /* 1. Stack the layout vertically */
+            body {
+                flex-direction: column;
+                /* Allow content to scroll vertically */
+                overflow-y: auto; 
+                min-height: auto; /* Remove minimum height constraint */
+            }
 
+            /* 2. Reposition and resize the Info Panel */
+            #infoPanel {
+                /* Set width to 100% to span the top of the screen */
+                width: 100%;
+                min-width: 100%; 
+                
+                /* Set a fixed height and allow it to scroll if content is too long */
+                height: auto; 
+                max-height: 50vh; /* Limits height to half the screen for balance */
+                overflow-y: scroll;
+                
+                /* Remove desktop-specific border radius */
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            
+            /* 3. Adjust the Main Content */
+            #main {
+                /* Reset flex-grow to 0 for a column layout */
+                flex-grow: 0; 
+                
+                /* Full width and minimal margins for phone screens */
+                width: 96%;
+                margin: 2%; 
+            }
+
+            /* 4. Ensure horizontal carousels fit perfectly */
+            .thoughts {
+                /* Allow a slight margin to make sure the scrollbar doesn't clip the items */
+                margin-left: -5px; 
+            }
+
+            /* readability */
+            h1 {
+                font-size: 1.5em; 
+            }
+            h3 {
+                font-size: 0.9em;
+            }
+            .content p, .content ul, .content text {
+                font-size: 10pt;
+            }
+        }
+ 
+        header{
+            text-align: center;
+            padding: 1%;
+            margin-bottom: 2%;
+        }
+        #infoPanel{
+            margin: 0;
+            padding: 1%;
+            padding-top: 0%;
+            padding-bottom: 0.5%;
+            
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            
+            background-color: rgba(0, 0, 0, 0.7);
+            color: rgb(186, 112, 0);
+            font-family: "Vast Shadow", serif;
+            
+
+            height: 100vh;
+            max-height: 100vh;
+            overflow-y: scroll;
+
+            max-width:fit-content;
+            min-width:30vw;
+        }
+        #infoPanel::-webkit-scrollbar{
+            display: none;
+        }
+        .content{
+            margin: 1%;
+            padding: 1%;
+            color:#d28d39
+        }
+
+        h1 {
+            color: rgb(255, 156, 58);
             /* text-decoration-line: underline;
             text-decoration-color: aliceblue;
             text-shadow: antiquewhite; */
             font-family: "Holtwood One SC", serif;
             /* src: url(https://cdn.glitch.global/1d2842b8-29f1-4aa4-8843-ee4e6eeec9de/Sansburg.ttf?v=1677706583973); */
         }
-        h2{
+        h2, h3{
             color: rgb(255, 156, 58);
             font-family: "Holtwood One SC", serif;
         }
-
         p{
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
             font-size: 15pt;  
         }
 
+        
         #main{
+            flex-grow: 1;
+
             display: flex;
-            flex-direction: row;
-            margin:2%;
-        }
-        #sidePanel{
-            display:flex;
-            flex-wrap: wrap;
             flex-direction: column;
-            background-color: beige;
-            color:rgb(186, 112, 0);
-
-            font-family: "Vast Shadow", serif;
-            margin-right:3%;
-            padding:2%;
-            width:fit-content;
+            margin-left:2%;
+            margin-right:2%;
+        } 
             
-
-            border-color: black;
-            border-style: double;
-            border-width: 10px;
-        }
-        #ven{
-            width:60%;
-        }
+        /* #ven{
+            width:60%; 
+        } */
+           
         .thoughts{
             display: flex;
-            /* flex-wrap: wrap; */
             flex-direction: row;
-            justify-content: start;
+            
             align-items: center;
 
-            width: 95%;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+
             overflow-x: scroll;
-            margin-left: 2%;
-            margin-bottom: 5%;
-            /* background: rgb(118, 194, 193,0.2); */
- 
+            flex-shrink: 0;
         }
         .thoughts::-webkit-scrollbar{
             display: none;
         }
+
         .link{
             display: flex;
-            flex-wrap: wrap;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            text-align: center;
+
+            /* margin-right: 15%; */
+            flex-shrink: 0;
 
             color:blanchedalmond;
             font-family: "Vast Shadow", serif;
-        }
+        } 
         img{
-            height: 125px;
+            height: 120px;
             width: auto;
         }
-        /*  <span style = "background-color:antiquewhite"></span> */
+
+        /* <span style = "background-color:antiquewhite"></span> */
         .holtwood-one-sc-regular {
             font-family: "Holtwood One SC", serif;
             font-weight: 400;
@@ -139,16 +213,14 @@
         
     </style>
     <body>
-        <header>
-            <h1>MY THOUGHT BUBBLES, YET THE MIND CLOUDS</h1>
-        </header>
-        <!-- <h1>S.Matthews AKA Cluck 's Thought Clouds</h1> -->
-        <div id = "main">
-            <div id = "sidePanel">
-                <span style="font-family: 'Holtwood One SC', serif;">Welcome to the Hub of Madness </span>as currated by clockedLuck the cluckcluck
-                <text> Here you may find the latest projects and links to my updated works, but no explainations</text>
-                <text><span style="font-family: 'Holtwood One SC', serif;"> NEVER AN EXPLAINATION</span></text>
-                <p></p>
+        
+        <div id="infoPanel">
+            <header>
+                <h1>S.Matthews</h1>
+                <h3>MY THOUGHT BUBBLES, YET THE MIND CLOUDS</h3>
+            </header>
+
+            <div class="content">
                 <text>Among my THOUGHTS you may find:</text>
                 <ul>
                     <li>[ABANDONED] Now Page</li>
@@ -164,17 +236,29 @@
                     <li>[UNDER-CONSTRUCTION] Chest-i-cuffs + Casino Version</li>
                     <li>[UNDER-CONSTRUCTION] Gotham: Alfred POV.p8</li>
                     <li>[UNDER-CONSTRUCTION] Red Hood Platformer.p8</li>
+                    <li>[UNDER-CONSTRUCTION] Mononoke Fan Game</li>
                 </ul>
-                <text>and once I MUST'VE LOST MY EFFIN MIND:</text>
+                <text>and once I MUST'VE LOST MY MIND:</text>
                 <ul>
                     <li>Radio</li>
                     <li>[UNDER-CONSTRUCTION] Guard Comics</li>
+                    <li>[UNDER-CONSTRUCTION] _runic: Magic Squares</li>
                 </ul>
 
+                <text><span style="font-size: x-large;">Contacts</span></text>
+                <ul>
+                    <li>Email: <a href="mailto:saciamatthews@gmail.com">Email Here</a></li>
+                    <li>LinkedIn: <a href="linkedin.com/in/sacia-matthews-374a571b5/">sacia-matthews</a></li>
+                    <li>GitHub: <a href="github.com/clackclock">clackclock</a></li>
+                    <li>Instagram: <a href="https://www.instagram.com/clockedluck/">@clockedluck</a></li>
+                    <li>Itch.io: <a href="https://clockedluck.itch.io/">clockedluck.itch.io</a></li>
             </div>
+            
+        </div>
 
+        <div id="main">
             <div id = "ven">
-                <h2><span style="background-color: rgba(240, 255, 255, 0.777); padding: 0.5%;">THOUGHTS</span></h2>
+                <h2><span style="background-color: rgba(240, 255, 255, 0.777); padding: 0.5%; border-radius: 10px;">THOUGHTS</span></h2>
                 <div class = "thoughts"> 
                     <div class = "link"> <a href="./now/index.html"><img src = "./images/cloud.png.png"> </a> Now</div>
                     <div class = "link"><a href = "./social_software_blog/index.html"><img src = "./images/cloud.png.png"></a> Blog</div>
@@ -182,23 +266,33 @@
                     <div class = "link"><a href = "./scriptWeb/momWeather/index.html"><img src = "./scriptWeb/images/weather-icon-png-2.png"></a>Mom's Weather Report</div>
                     <div class = "link"><a href = "tickTock_clock/index.html"><img src = "tickTock_clock/clock-line-icon.png"></a>Sisyphisian Clock</div>
                 </div>
-                <h2><span style="background-color: rgba(240, 255, 255, 0.777); padding: 0.5%;">GAMES</span></h2>
+                <h2><span style="background-color: rgba(240, 255, 255, 0.777); padding: 0.5%; border-radius: 10px;">GAMES</span></h2>
                 <div class = "thoughts">
                     <div class = "link"><a href = "./scriptWeb/index.html"><img src = "images/chesticuffs_logo.png"></a> Card</div>
                     <div class = "link"><a href = "./gotham_html/index.html"><img src = "images/gothamCity.png"></a>Gotham:Alf_POV</div>
                     
                 </div>
-                <h2><span style="background-color: rgba(240, 255, 255, 0.777); padding: 0.5%;">I MUST'VE LOST MY EFFIN MIND</span></h2>
+                <h2><span style="background-color: rgba(240, 255, 255, 0.777); padding: 0.5%; border-radius: 10px;">I MUST'VE LOST MY MIND</span></h2>
                 <div class = "thoughts">
                     <div class = "link"><a href = "./scriptWeb/radio/index.html"><img src = "https://cdn.glitch.global/cb182bcb-4007-424f-a40d-8b8f275fe7c4/1104435.png?v=1712782407985"></a>DIY.FM Radio</div>
                     <div class = "link"><a href = "oc_gc/index.html"><img src = "./images/cloud.png.png"></a>OG GC</div>
+                    <div class = "link"><a href="oldguardcomics.neocities.org"><img src = "./images/cloud.png.png"></a>neocities oldguardcomics</div>
                 </div>
-
             </div>
-            
         </div>
+        
+
     
-        <div id="social">
+        
+        <!-- <h1>S.Matthews AKA Cluck 's Thought Clouds</h1> -->
+        <!-- <div id = "main"> -->
+            <!-- <span style="font-family: 'Holtwood One SC', serif;">Welcome to the Hub of Madness </span>as currated by clockedLuck the cluckcluck
+            <text> Here you may find the latest projects and links to my updated works, but no explainations</text>
+            <text><span style="font-family: 'Holtwood One SC', serif;"> NEVER AN EXPLAINATION</span></text>
+            <p></p> -->
+        <!-- </div> -->
+    
+        <!-- <div id="social">
             <script
                 type="text/javascript"
                 src="/lee.tusman/assets/js/onionring-variables.js"
@@ -207,7 +301,7 @@
                 type="text/javascript"
                 src="/lee.tusman/assets/js/onionring-widget.js"
             ></script>
-        </div>
+        </div> -->
 
     </body>
 
