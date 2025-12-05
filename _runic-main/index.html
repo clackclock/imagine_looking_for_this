@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width = device-width, initial-scale = 1" />
+        <title>Tome Editor</title>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Loved+by+the+King&display=swap" rel="stylesheet">
+        
+        <!-- icon -->
+        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/f/f5/Weatherlight_icon.svg">
+    </head>
+
+    <!-- style sheets -->
+    <link href="./style/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/roughjs@latest/bundled/rough.js"></script>
+
+    
+    <body>
+        <header>
+            <div>
+                <img src = "https://upload.wikimedia.org/wikipedia/commons/f/f5/Weatherlight_icon.svg" height="60px"> 
+                <a>_rune</a>
+            </div>
+        </header>
+
+        <div id="top">
+            <canvas id="canvas" width="600" height="370"></canvas>
+            <!-- width="800" height="600" -->
+            <textarea id="notes">// Code Here...</textarea>
+        </div>
+        <div id="bottom">
+            <div class="btnMenu">
+                <button class="comic-button">RUN</button>
+                <button class="comic-button">PRETTIFY</button>
+                <button class="comic-button" onclick="clearCanvas()">CLEAR</button>
+                <button class="comic-button">PRINT</button>
+            </div>
+            <!-- THE BUTTONS FOR THE METHODS AND STATEMENTS WILL BE BELOW -->
+            <div class="mgKeys">
+                <!-- From Uiverse.io by 20essentials --> 
+                <article class="keycap" onclick="func()"><aside class="letter">FUNC</aside></article>
+                <article class="keycap" onclick="forLoop()"><aside class="letter">for</aside></article>
+                <article class="keycap"><aside class="letter">while</aside></article>
+                <article class="keycap"><aside class="letter">if</aside></article>
+                <article class="keycap"><aside class="letter">else</aside></article>
+                <article class="keycap"><aside class="letter">return</aside></article>
+                <article class="keycap"><aside class="letter">break</aside></article>
+                <article class="keycap"><aside class="letter">continue</aside></article>
+                <article class="keycap"><aside class="letter">switch</aside></article>
+                <article class="keycap"><aside class="letter">print</aside></article>
+                
+                
+            </div>
+        </div>
+        
+        <!-- <script src="./scripts/testCanvas.js"></script> -->
+        <script src="./scripts/script.js"></script>
+        
+    </body>
+    
+</html>
