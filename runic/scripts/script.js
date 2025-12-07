@@ -4,7 +4,8 @@ let gen = rc.generator;
 //main shape
 // rc.circle(300, 185, 450, {stroke: 'orange', fill: 'yellow', fillStyle: 'zigzag', roughness: 1, hachureGap: 6});
 // rc.circle(300, 185, 410, {stroke: 'orange', fill: 'yellow', fillStyle: 'zigzag', roughness: 1, hachureGap: 6});
-rc.polygon([[300, 5], [480, 100], [480, 270], [300, 365], [120,270], [120,100]], {stroke: 'black', fill: 'sienna', fillStyle: 'cross-hatch', roughness: 1});
+rc.rectangle(183, 65, 235, 235, {stroke: 'orange', fill: 'yellow', fillStyle: 'zigzag', roughness: 1, hachureGap: 6});
+rc.polygon([[300, 5], [480, 100], [480, 270], [300, 365], [120,270], [120,100]], {stroke: 'black', fill: 'sienna', fillStyle: 'cross-hatch',  roughness: 1}); //fill: 'sienna', fillStyle: 'cross-hatch',
 
 
 let star = gen.polygon([[10, 60], [40, 60], [60,10], [80,60], [100, 60], [80, 75],[100,130],[60,100],[10,130],[35, 75]], {stroke: 'yellow', fill: 'yellow', fillStyle: 'cross-hatch', hachureGap: 8, roughness: 2});
@@ -30,5 +31,7 @@ function func(){
     const myTextarea = document.getElementById("notes");
     myTextarea.value += '\nfunction _myFunction(var myVariables){ //basic building blocks of a program';
 
-    rc.polygon([[300, 5], [480, 100], [480, 270], [300, 365], [120,270], [120,100]], {stroke: 'black', fill: 'sienna', fillStyle: 'cross-hatch', roughness: 1});
+    rc.polygon([[300, 5], [480, 100], [480, 270], [300, 365], [120,270], [120,100]], {stroke: 'black', roughness: 1});
+    rc.rectangle(183, 65, 235, 235, {stroke: 'orange', roughness: 1});
+
 }
