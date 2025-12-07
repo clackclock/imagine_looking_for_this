@@ -3,7 +3,7 @@ let gen = rc.generator;
 
 //main shape
 // rc.circle(300, 185, 450, {stroke: 'orange', fill: 'yellow', fillStyle: 'zigzag', roughness: 1, hachureGap: 6});
-rc.circle(300, 185, 410, {stroke: 'orange', fill: 'yellow', fillStyle: 'zigzag', roughness: 1, hachureGap: 6});
+// rc.circle(300, 185, 410, {stroke: 'orange', fill: 'yellow', fillStyle: 'zigzag', roughness: 1, hachureGap: 6});
 rc.polygon([[300, 5], [480, 100], [480, 270], [300, 365], [120,270], [120,100]], {stroke: 'black', fill: 'sienna', fillStyle: 'cross-hatch', roughness: 1});
 
 
